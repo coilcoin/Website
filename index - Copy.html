@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/styles.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <div class="navbar-fixed">
+        <nav class="topOfPage z-depth-0">
+            <div class="nav-wrapper container">
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>                    
+                <a href="#" class="brand-logo "><img id="navLogo" src="images/coil_prescroll2.png"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a id="fancy-link" href="#">Link1</a></li>
+                    <li><a id="fancy-link" href="#">Link2</a></li>
+                    <li><a id="fancy-link" href="#">Link3</a></li>
+                </ul>
+                
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a id="mobileText" href="#"><i class="large material-icons white-text">keyboard_backspace</i></a></li>
+                    <li><a id="mobileText" href="#">Link 1</a></li>
+                    <li><a id="mobileText" href="#">Link 2</a></li>
+                    <li><a id="mobileText" href="#">Link 3</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="video-viewport" class="row section">
+            
+        <video loop muted autoplay preload playsinline width="1280" height="720">               
+            <source src="videos/main.mp4" />
+        </video>
+                  
+    </div>
+    <div class="row container" style="position: relative;">
+        <h1 id="coilLogo" class="center-align white-text">Coil</h1>
+    </div>
+
+    <div id="content" class="row container">
+        <h2 class="white-text header center">Written in Python</h2>
+        <p class="center grey-text text-darken-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="row white-text">
+            <div class="col s12 m4">
+                <div class="center promo promo-example">
+                <i class="material-icons">flash_on</i>
+                <p class="promo-caption">Speeds up development</p>
+                <p class="light center grey-text text-darken-1">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components.</p>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="center promo promo-example">
+                <i class="material-icons">group</i>
+                <p class="promo-caption">User Experience Focused</p>
+                <p class="light center grey-text text-darken-1">By utilizing elements and principles of Material Design, we were able to create a framework that focuses on User Experience.</p>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="center promo promo-example">
+                <i class="material-icons">settings</i>
+                <p class="promo-caption">Easy to work with</p>
+                <p class="light center grey-text text-darken-1">We have provided detailed documentation as well as specific code examples to help new users get started.</p>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <script>
+        $(document).ready(function(){
+            $('.parallax').parallax();
+
+            $(".button-collapse").sideNav();
+
+        });
+
+        var min_w = 300;
+        var vid_w_orig;  
+        var vid_h_orig;
+        jQuery(function() {
+            
+            vid_w_orig = parseInt(jQuery('video').attr('width'));
+            vid_h_orig = parseInt(jQuery('video').attr('height'));
+            $('#debug').append("<p>DOM loaded</p>");
+            
+            jQuery(window).resize(function () { resizeToCover(); });
+            jQuery(window).trigger('resize');
+        });
+        
+        function resizeToCover() {
+            
+            jQuery('#video-viewport').width(jQuery(window).width());
+            jQuery('#video-viewport').height(jQuery(window).height());
+        
+            var scale_h = jQuery(window).width() / vid_w_orig;
+            var scale_v = jQuery(window).height() / vid_h_orig;
+            var scale = scale_h > scale_v ? scale_h : scale_v;
+
+            if (scale * vid_w_orig < min_w) {
+                scale = min_w / vid_w_orig;
+            };
+
+            jQuery('video').width(scale * vid_w_orig);
+            jQuery('video').height(scale * vid_h_orig);
+            jQuery('#video-viewport').scrollLeft((jQuery('video').width() - jQuery(window).width()) / 2);
+            jQuery('#video-viewport').scrollTop((jQuery('video').height() - jQuery(window).height()) / 2);
+        };
+
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('nav').addClass('scrolled');
+                $('nav').removeClass('topOfPage');
+                $('nav').removeClass('z-depth-0');
+                $('a').addClass('navText');
+            } else {
+                $('nav').removeClass('scrolled');
+                $('nav').addClass('topOfPage');
+                $('nav').addClass('z-depth-0');
+                $('a').removeClass('navText');
+            }
+        });
+    </script>
+    </div>
+  </body>
+</html>
