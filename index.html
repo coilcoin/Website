@@ -28,14 +28,14 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a id="fancy-link" href="https://github.com/coilcoin" target="_blank">GitHub</a></li>
                     <li><a id="fancy-link" href="#">About</a></li>
-                    <li><a id="fancy-link" href="#">Buy COL</a></li>
+                    <li><a id="fancy-link" href="#">Buy</a></li>
                 </ul>
                 
                 <ul class="side-nav" id="mobile-demo">
                     <li><a id="mobileText" href="#"><i class="large material-icons white-text">keyboard_backspace</i></a></li>
                     <li><a id="mobileText" href="https://github.com/coilcoin" target="_blank">GitHub</a></li>
                     <li><a id="mobileText" href="#">About</a></li>
-                    <li><a id="mobileText" href="#">Buy COL</a></li>
+                    <li><a id="mobileText" href="#">Buy</a></li>
                 </ul>
             </div>
         </nav>
@@ -44,16 +44,16 @@
     <div class="row">
         <div class="particle-container" id="particles-js"></div>
         <h1 id="coilLogo" class="center-align noHighLight">Coil</h1>
-        <p id="coilTag"class="center noHighLight">An open-source P2P digital currency designed for you.</p>
+        <div id="hero-pad">
+            <p id="coilTag"class="center noHighLight">An open-source P2P digital currency designed for you.</p>
+        </div>
     </div>
     
-
-
     <div id="content" class="row container">
         <h2 class="white-text header center">Coil Coin</h2>
         <div class="row">
             <div class="col s12 m6 offset-m3">
-                <p class="center grey-text text-darken-1">Coil uses peer-to-peer technology to operate with no central authority or banks. The management of transactions and the distribution of Coil coin is carried out by the network</p>  
+                <p class="center grey-text text-darken-1">Coil uses peer-to-peer technology to operate with no central authority or banks. The management of transactions and the distribution of Coil coin is carried out by the network.</p>  
             </div>
         </div>
         <br>
@@ -62,14 +62,14 @@
                 <div class="center promo promo-example">
                 <i class="material-icons">cloud_queue</i>
                 <p class="promo-caption">Light Weight</p>
-                <p class="light center grey-text text-darken-1">Coil is written in python, and designed for a node to be ran on a raspberry pi making it easily acsessable to the masses.</p>
+                <p class="light center grey-text text-darken-1">Coil is written in python, and designed for a node to be ran on a raspberry pi making it easily accessable to the masses.</p>
                 </div>
             </div>
             <div class="col s12 m4">
                 <div class="center promo promo-example">
                 <i class="material-icons">language</i>
                 <p class="promo-caption">Distributed</p>
-                <p class="light center grey-text text-darken-1">Coil is open-source and built on the principles of blockchain. This means it will scale up by using growing set of validators around the globe</p>
+                <p class="light center grey-text text-darken-1">Coil is open-source and built on the principles of blockchain. This means it will scale up by using growing set of validators around the globe.</p>
                 </div>
             </div>
             <div class="col s12 m4">
@@ -111,9 +111,7 @@
     <script>
         $(document).ready(function(){
             $('.parallax').parallax();
-
             $(".button-collapse").sideNav();
-
         });
 
         $(window).scroll(function() {

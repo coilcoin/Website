@@ -86,13 +86,15 @@ nav, a, li, img{
     background-size: cover;
     background-position: 50% 50%;
     top: -63px;
-  }
-#coilTag{
+}
+
+#coilTag {
     position: relative;
     top: -420px;
     color: rgba(255,255,255,0.9);
-    font-size: 1.3rem;
+    font-size: 1.8rem;
 }
+
 .noHighLight{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
