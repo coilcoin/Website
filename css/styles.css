@@ -3,7 +3,7 @@ nav, a, li, img{
     transition: all 0.6s ease;
  }
 
-body {
+ body {
      background-color: #111114;
  }
 
@@ -22,6 +22,9 @@ body {
     color: White !important;
 }
 
+.side-nav{
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
 .particle-container {
     height: 700px;
@@ -31,30 +34,7 @@ body {
     font-size: 6em;
 }
 
-.content{
-    position: relative;
-    top: -123px;
-}
-
-.side-nav{
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-.noHighLight{
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: -moz-none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-
-#navLogo {
-    height: 2em;
-}
-
-#fancy-link {
+ #fancy-link {
     color: #ffffff;
     text-decoration: none;
     transition: color 0.3s linear;
@@ -65,6 +45,10 @@ body {
 .fancy-link:hover {
     color: #19B655 !important;
     text-shadow: #19B655 !important;
+}
+
+#altColor {
+    background-color: rgb(17,17,20);
 }
 
 #coilLogo {
@@ -78,16 +62,16 @@ body {
     color: rgba(255,255,255,0.9);
 }
 
-#altColor {
-    background-color: rgb(17,17,20);
+#navLogo {
+    height: 2em;
 }
-
-
-
+#content{
+    position: relative;
+    top: -123px;
+}
 #mobileText {
     color: white;
 }
-
 #sidenav-overlay{
     opacity: 0 !important;
 }
@@ -103,10 +87,32 @@ body {
     background-position: 50% 50%;
     top: -63px;
   }
-  
 #coilTag{
     position: relative;
     top: -420px;
     color: rgba(255,255,255,0.9);
+    font-size: 1.3rem;
+}
+.noHighLight{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+/*** T H E - M A G I C - O F - O B J E C T - F I T ***/
+/*****************************************************/
+
+#video-viewport {
+    position: relative;
+    top: -80px;
+    left:0;
+    overflow: hidden;
+    z-index: -1; /* for accessing the video by click */
+    max-height: 50em;
 }
 
