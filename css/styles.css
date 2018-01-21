@@ -7,7 +7,6 @@ nav, a, li, img{
      background-color: #111114;
  }
 
-
 .scrolled{
     background-color: rgba(0, 0, 0, 0.8);
     color: black;
@@ -65,15 +64,18 @@ nav, a, li, img{
 #navLogo {
     height: 2em;
 }
+
 #content{
     position: relative;
     top: -143px;
 }
+
 #mobileText {
     color: white;
 }
+
 #sidenav-overlay{
-    opacity: 0 !important;
+    display: none !important;
 }
 
 #particles-js {
