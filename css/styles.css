@@ -65,7 +65,7 @@ nav, a, li, img{
     height: 2em;
 }
 
-#content{
+.content{
     position: relative;
     top: -143px;
 }
